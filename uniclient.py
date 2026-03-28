@@ -16,7 +16,7 @@ app = FastAPI()
 
 @app.post("/receive")
 async def handle_incoming_packet(request: Request):
-    """Background endpoint to catch incoming PQC packets via ngrok"""
+    """Background endpoint to catch incoming PQC packets via ngrok on Port 8001"""
     try:
         data = await request.json()
         # Save as transfer.json for the main thread to pick up
@@ -27,14 +27,14 @@ async def handle_incoming_packet(request: Request):
         return {"status": "ERROR", "message": str(e)}
 
 def run_listener():
-    """Starts the PQC listener on Port 8001 (Port 8000 is reserved for the API)"""
+    """Starts the PQC listener on Port 8001 (Avoiding Port 8000 conflict)"""
     uvicorn.run(app, host="0.0.0.0", port=8001, log_level="error")
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  CLIENT UI & TACTICAL LOGIC
 # ══════════════════════════════════════════════════════════════════════════════
 def display_packet(data, title="PQC DATA INSPECTION"):
-    """Displays raw JSON to prove data is dynamic and not hardcoded"""
+    """Displays raw JSON to prove data is dynamic and real"""
     print(f"\n{'='*60}")
     print(f"🛰️  {title}")
     print(f"{'='*60}")
