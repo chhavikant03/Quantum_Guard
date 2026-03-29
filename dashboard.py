@@ -11,7 +11,7 @@ import io
 
 # Page config
 st.set_page_config(
-    page_title="QuantumGuard | Advanced Tactical Dashboard",
+    page_title="Quantum Guard | Advanced Tactical Dashboard",
     page_icon="🔐",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -252,14 +252,10 @@ st.markdown("""
 <div class="header">
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <div>
-            <h1 style="margin: 0; font-weight: 900; font-size: clamp(3rem, 8vw, 5rem); letter-spacing: -0.08em; text-shadow: 0 8px 24px rgba(0,102,255,0.4), 0 0 40px rgba(139,92,246,0.3); background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 50%, var(--neon-green) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">QuantumGuard</h1>
+            <h1 style="margin: 0; font-weight: 900; font-size: clamp(3rem, 8vw, 5rem); letter-spacing: -0.08em; text-shadow: 0 8px 24px rgba(0,102,255,0.4), 0 0 40px rgba(139,92,246,0.3); background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 50%, var(--neon-green) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Quantum Guard</h1>
             <p style="margin: 0; color: var(--text-muted); font-size: 1rem;">Advanced PQC Secure Gateway</p>
         </div>
-        <div style="display: flex; gap: 1rem; align-items: center;">
-            <button onclick="window.location.reload();" style="background: none; border: none; color: var(--neon-blue); font-size: 1.2rem; cursor: pointer;">🔄</button>
-            <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
-        </div>
-    </div>
+
 </div>
 """, unsafe_allow_html=True)
 
@@ -444,7 +440,7 @@ elif page == "📈 Network Telemetry":
 # Footer
 st.markdown(f"""
 <div style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.9rem;">
-    © {datetime.datetime.now().year} QuantumGuard | Real-time PQC Dashboard | Powered by Streamlit
+    © {datetime.datetime.now().year} Quantum Guard | Real-time PQC Dashboard | Powered by Streamlit
 </div>
 """, unsafe_allow_html=True)
 
