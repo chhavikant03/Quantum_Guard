@@ -2,7 +2,7 @@ import random
 import tkinter as tk
 from tkinter import messagebox
 
-# ---------------- PRIME GENERATION ----------------
+
 def is_prime(n):
     if n < 2:
         return False
@@ -17,7 +17,7 @@ def generate_prime(bits=32):
         if is_prime(num):
             return num
 
-# ---------------- RSA KEYGEN ----------------
+
 def gcd(a, b):
     while b:
         a, b = b, a % b
@@ -42,7 +42,7 @@ def generate_keys(e_value=None):
 
     return n, e
 
-# ---------------- ENCRYPTION ----------------
+
 def encrypt_message(message, e, n):
     encrypted = []
     for char in message:
@@ -53,7 +53,7 @@ def encrypt_message(message, e, n):
         encrypted.append(c)
     return encrypted
 
-# ---------------- GUI FUNCTION ----------------
+
 def run_encryption():
     try:
         message = message_entry.get()
@@ -75,7 +75,7 @@ def run_encryption():
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
-# ---------------- GUI ----------------
+
 root = tk.Tk()
 root.title("RSA 64-bit Encryptor")
 root.geometry("600x400")
