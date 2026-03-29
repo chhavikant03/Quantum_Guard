@@ -10,9 +10,7 @@ st.set_page_config(
 # ── Load Global CSS ───────────────────────────────────────────────────────────
 st.markdown(load_css(), unsafe_allow_html=True)
 
-# ══════════════════════════════════════════════════════════════════════════════
-# GLOBAL WHITE GLASSMORPHISM THEME
-# ══════════════════════════════════════════════════════════════════════════════
+
 st.markdown("""
 <style>
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap');
@@ -278,9 +276,6 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# ══════════════════════════════════════════════════════════════════════════════
-# SIDEBAR — styled like the Admin Panel card in screenshot
-# ══════════════════════════════════════════════════════════════════════════════
 st.sidebar.markdown("""
 <div class="sidebar-brand-card">
     <div class="brand-title">DASHBOARD</div>
@@ -293,9 +288,6 @@ page = st.sidebar.radio(
     ["Home Page", "RSA Encryptor", "RSA Breaker", "Messaging"]
 )
 
-# ══════════════════════════════════════════════════════════════════════════════
-# HOME PAGE
-# ══════════════════════════════════════════════════════════════════════════════
 if page == "Home Page":
 
     # Hero Banner — styled like the screenshot's "Quantum Guard" hero card
@@ -449,9 +441,7 @@ if page == "Home Page":
     st.markdown("<br>", unsafe_allow_html=True)
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# RSA ENCRYPTOR
-# ══════════════════════════════════════════════════════════════════════════════
+
 elif page == "RSA Encryptor":
 
     st.markdown(section_header(
@@ -497,9 +487,7 @@ elif page == "RSA Encryptor":
             st.warning("⚠️ Please enter a message!")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# RSA BREAKER
-# ══════════════════════════════════════════════════════════════════════════════
+
 elif page == "RSA Breaker":
 
     st.markdown(section_header(
@@ -584,9 +572,7 @@ elif page == "RSA Breaker":
             st.warning("⚠️ Please fill all fields!")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# MESSAGING
-# ══════════════════════════════════════════════════════════════════════════════
+
 elif page == "Messaging":
 
     st.markdown(section_header(
