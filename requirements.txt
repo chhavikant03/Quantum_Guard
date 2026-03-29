@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+streamlit
+cryptography
+sympy
+liboqs
+requests
